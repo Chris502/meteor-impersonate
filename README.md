@@ -7,34 +7,7 @@ Installation
 ------------
 
 ``` sh
-meteor add gwendall:impersonate
-```
-
-DOM helpers
------------
-
-**Impersonate**  
-Set a [data-impersonate] attribute with the id of the user to impersonate on a DOM element.
-``` html
-<button data-impersonate="{{someUser._id}}">Click to impersonate</button>
-```
-
-**Un-impersonate**  
-Set a [data-unimpersonate] attribute to a DOM element.
-``` html
-<button data-unimpersonate>Click to unimpersonate</button>
-```
-
-UI helpers
-----------
-
-**isImpersonating**  
-``` html
-{{#if isImpersonating}}
-  <button data-unimpersonate>Click to unimpersonate</button>
-{{else}}
-  <button data-impersonate="{{_id}}">Click to impersonate</button>
-{{/if}}
+meteor add sokki:impersonate
 ```
 
 Client Methods
@@ -80,5 +53,6 @@ Impersonate.adminGroups = [
 Notes
 -----
 
+- Fork of [gwendall:impersonate](https://github.com/gwendall/meteor-impersonate) without blaze
 - Uses alanning:roles. If the user trying to impersonate is not an admin, a server error will be returned.
 - Built upon [David Weldon](https://dweldon.silvrback.com/impersonating-a-user)'s post
